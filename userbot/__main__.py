@@ -20,7 +20,7 @@ from .utils import (
 LOGS = logging.getLogger("LionZ")
 
 print(userbot.__copyright__)
-print("Licensed under the terms of the " + userbot.__license__)
+print(f"Licensed under the terms of the {userbot.__license__}")
 
 cmdhr = Config.COMMAND_HAND_LER
 
@@ -63,12 +63,6 @@ async def startup_process():
     await startupmessage()
     Lioncheck.sucess = True
     return
-    # Join Lion X Channel after deploying 🤐😅
-    # Why not come here and chat??
-    try:
-        await lionub(JoinChannelRequest("@LionXUpdates"))
-    except BaseException:
-        pass
 
 
 lionub.loop.run_until_complete(startup_process())
